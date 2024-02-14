@@ -107,37 +107,74 @@ footer{
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-
+.hover a:focus, .hover a:hover{
+  text-decoration: underline;
+}
 
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-
+.skip a{
+  position: absolute;
+  top: -40px;
+}
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-
+.skip a:focus{
+  top: 20px;
+}
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-
+.focus{
+  border: 2px solid black;
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
-
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 15px;
+}
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 
-
-
+.container > :first-child {
+  grid-column: 1 / -1; 
+  background-image: url('header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
-
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
+/*This will be a lot of rules.... but be strategic and combine seletors*/
+.about {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+.method {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+.clients {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+.contact {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
 
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
-
+.text-block{
+  position: absolute;
+  text-align: center;
+}
 /* Add your media query here */
+@media (min-width: 800px){
 
 
   /* Step 9: Write the selector/rule property to style the nav element */
@@ -152,3 +189,4 @@ first div in the grid  and place it in the grid. */
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
 
+}
