@@ -6,7 +6,8 @@ body{
   background-color: #737373;
   font-size: 18px;
   line-height: 1.15;
-  margin: 0;
+  margin: 15px;
+  
   padding: 0;
 }
 
@@ -23,12 +24,12 @@ body{
 }
 
 .overview h1, .overview p {
-  position: absolute; /* Position the text absolutely within .overview */
-  top: 10px; /* Adjust as needed to position at the top */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust horizontal centering */
-  width: 100%; /* Ensure full width for proper centering */
-  padding: 0 100px; /* Adjust padding as needed */
+  position: absolute; 
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  padding: 0 100px; 
 }
 
 .overview h1 {
@@ -90,7 +91,8 @@ nav{
 }
 
 footer{
-  background-color: black;
+  grid-column: 1;
+  background-color: black !important;
   color: white;
   padding-top: 30px;
   text-align: center;
@@ -209,18 +211,41 @@ four rows in the grid. */
 }
 
 /* Add your media query here */
-@media (min-width: 800px){
+@media (min-width: 800px) {
+  nav {
+    padding: 30px 0;
+    text-align: right;
+  }
 
+  .container {
+    grid-template-columns: 50px auto 500px auto 50px;
+  }
+
+  .about, .clients, .method-image, .contact-image {
+    grid-column: 3 / span 2;
+  }
+
+  .method, .contact, .about-image, .clients-image {
+    grid-column: 2 / span 2;
+  }
+
+  .text-block {
+    max-height: 250px;
+    overflow: auto;
+  }
 }
+  
 
   /* Step 9: Write the selector/rule property to style the nav element */
-  
- 
-  /* Step 10: Write the selector/rule property to update the .container class */
 
+
+ 
+  /* Step 10: Write the selector/rule property to update the .container class * The .about, .clients, .method-image, .contact-image:
+Begin in the third column and span two columns
+*/
+  
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
-
 
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
