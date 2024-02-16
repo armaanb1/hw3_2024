@@ -238,8 +238,7 @@ four rows in the grid. */
   .text-block {
     max-height: 250px;
     overflow: auto;
-    vertical-align: center;
-
+    align-self: center;
   }
 }
   
