@@ -81,26 +81,7 @@ footer{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  
 }
-
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-}
-
 
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -206,8 +187,9 @@ four rows in the grid. */
 .text-block {
   display: grid;
   text-align: center;
-  place-items: center;
-  height: 100%
+  align-self: center;
+  max-height: fit-content;
+  
 }
 
 /* Add your media query here */
